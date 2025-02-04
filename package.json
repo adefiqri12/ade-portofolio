@@ -1,0 +1,28 @@
+{
+  "scripts": {
+    "dev": "tailwindcss -i src/static/tailwind/tailwind-input.css -o src/static/css/output.css --watch"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.3"
+  },
+  "name": "ade-portofolio",
+  "version": "1.0.0",
+  "description": "Ade Fiqri's personal Portfolio website containing AI and Data Scientist Projects",
+  "main": "tailwind.config.js",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^4.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adefiqri12/ade-portofolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adefiqri12/ade-portofolio/issues"
+  },
+  "homepage": "https://github.com/adefiqri12/ade-portofolio#readme"
+}
