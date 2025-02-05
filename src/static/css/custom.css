@@ -1,9 +1,20 @@
 .radial-gradient-bg {
-    background-image: radial-gradient(
-        circle 400px at var(--x) var(--y),
-        rgba(8, 20, 88, 0.4) 0%,
+    position: relative;
+    background: 
+      /* Layer 1: The dot pattern */
+      radial-gradient(
+        circle 1px at 50% 50%,
+        rgba(38, 100, 150, 1) 0%,
         transparent 100%
-    );
-    background-repeat: no-repeat;
-    background-attachment: local;
-}
+      ) 0 0/20px 20px,
+      /* Layer 2: The moving radial gradient */
+      radial-gradient(
+        circle 300px at var(--x) var(--y),
+        rgba(12, 40, 92, 0.4) 0%,
+        transparent 100%
+      ),
+      /* Layer 3: Base background color */
+      rgb(17, 24, 39); /* equivalent to bg-gray-900 */
+    background-repeat: repeat, no-repeat, no-repeat;
+  }
+  
