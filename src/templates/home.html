@@ -19,78 +19,105 @@
     <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 
-<body class= "scrollbar">
+<body class="scrollbar">
     <canvas id="dotCanvas"></canvas>
-    <header class="w-full left-0 transition-all md:py-8 bg-transparent" style="top: 0px;">
-        <div class="container mx-auto flex justify-between items-center px-8">
-            <h2 class="text-xl font-bold">Ade Fiqri</h2>
-            <ul class="flex space-x-6 text-neutral-400">
-                <li><a href="#home" class="">Home</a></li>
-                <li><a href="#about" class="">About</a></li>
-                <li><a href="#skills" class="">Skills</a></li>
-                <li><a href="#projects" class="">Projects</a></li>
-                <li><a href="#contact" class="">Contact</a></li>
+
+    <!-- Header -->
+    <header class="bg-transparent fixed top-0 w-full z-50">
+        <div class="container mx-auto flex items-center justify-between px-8 py-4">
+        <h2 class="text-xl font-bold">Ade Fiqri</h2>
+        <nav>
+            <!-- Desktop Navigation -->
+            <ul class="hidden md:flex space-x-6 text-neutral-400">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <!-- Hamburger Button (Mobile) -->
+            <button id="hamburger" class="md:hidden text-neutral-400 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            </nav>
+        </div>
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden md:hidden">
+            <ul class="flex flex-col space-y-4 bg-neutral-900 text-neutral-400 p-4">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </header>
 
-    <main class="min-h-dvh mx-auto px-8">
-        <section id="hero" class="text-center py-40">
-            <h1 id="typing-text" class="text-5xl font-bold">
-                <div class="typing-container">
-                    <span id="text-content"></span>
-                    <div class="typing-bar"></div>
-                </div>
-            </h1>
-            <p class="mt-4 max-w-2xl mx-auto">I specialize in deep learning, NLP, and computer vision. My goal is to leverage AI to solve complex problems and create impactful solutions.</p>
-            <div class="mt-6">
-                <a href="#projects" class="inline-block px-6 py-3 bg-neutral-900 font-semibold rounded-full">View My Work</a>
-                <a href="#contact" class="inline-block ml-4 px-6 py-3 bg-neutral-950 border border-neutral-900 font-semibold rounded-full"> Contact Me</a>
-            </div>
-        </section>
 
-        <section id="about" class="my-10 text-center">
-            <h2 class="text-3xl font-semibold">About Me</h2>
-            <p class="mt-4 text-lg">I am an AI researcher passionate about deep learning, NLP, and computer vision.</p>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="my-10">
-            <h2 class="text-3xl font-semibold text-center">Skills</h2>
-            <div class="flex flex-wrap justify-center gap-4 mt-6">
-                <span class="px-4 py-2 bg-neutral-900 rounded-full">Python</span>
-                <span class="px-4 py-2 bg-neutral-900 rounded-full">TensorFlow</span>
-                <span class="px-4 py-2 bg-neutral-900 rounded-full">PyTorch</span>
-                <span class="px-4 py-2 bg-neutral-900 rounded-full">NLP</span>
-                <span class="px-4 py-2 bg-neutral-900 rounded-full">Computer Vision</span>
+    <!-- Main Content -->
+    <!-- Note: We add some top padding (pt-20) to offset the fixed header -->
+    <main class="container mx-auto px-8 pt-20">
+    <section id="hero" class="text-center py-20 sm:py-40">
+        <h1 id="typing-text" class="text-3xl sm:text-4xl md:text-5xl font-bold">
+            <div class="typing-container">
+                <span id="text-content">Your Hero Text Here</span>
+                <div class="typing-bar"></div>
             </div>
-        </section>
+        </h1>
+        <p class="mt-4 max-w-2xl mx-auto">
+            I specialize in deep learning, NLP, and computer vision. My goal is to leverage AI to solve complex problems and create impactful solutions.
+        </p>
+        <div class="mt-6">
+            <a href="#projects" class="inline-block px-6 py-3 bg-neutral-900 font-semibold rounded-full">View My Work</a>
+            <a href="#contact" class="inline-block ml-4 px-6 py-3 bg-neutral-950 border border-neutral-900 font-semibold rounded-full">Contact Me</a>
+        </div>
+    </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="my-10 text-center">
-            <h2 class="text-3xl font-semibold">Projects</h2>
-            <div class="grid md:grid-cols-2 gap-6 mt-6">
-                <div class="p-4 bg-neutral-900 shadow-lg rounded-lg">
-                    <h3 class="text-xl font-semibold">Stock Price Prediction</h3>
-                    <p class="mt-2">Developed an LSTM-based model to predict stock prices using sentiment analysis.</p>
-                </div>
-                <div class="p-4 bg-neutral-900 shadow-lg rounded-lg">
-                    <h3 class="text-xl font-semibold">Medical AI</h3>
-                    <p class="mt-2">Multiomics-based PRS prediction using transformers for disease risk assessment.</p>
-                </div>
-            </div>
-        </section>
+    <!-- Additional Sections -->
+    <section id="about" class="my-10 text-center">
+        <h2 class="text-3xl font-semibold">About Me</h2>
+        <p class="mt-4 text-lg">I am an AI researcher passionate about deep learning, NLP, and computer vision.</p>
+    </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="text-center py-20">
-            <h2 class="text-3xl font-semibold">Contact Me</h2>
-            <p class="mt-4">Feel free to reach out</p>
-            <div class="mt-4">
-                <a href="mailto:your.email@example.com" class="px-4 py-2 bg-neutral-900 rounded-full">Email Me</a>
-                <a href="https://www.linkedin.com/in/yourprofile" class="ml-4 px-4 py-2 bg-neutral-900 rounded-full">LinkedIn</a>
+    <section id="skills" class="my-10">
+        <h2 class="text-3xl font-semibold text-center">Skills</h2>
+        <div class="flex flex-wrap justify-center gap-4 mt-6">
+            <span class="px-4 py-2 bg-neutral-900 rounded-full">Python</span>
+            <span class="px-4 py-2 bg-neutral-900 rounded-full">TensorFlow</span>
+            <span class="px-4 py-2 bg-neutral-900 rounded-full">PyTorch</span>
+            <span class="px-4 py-2 bg-neutral-900 rounded-full">NLP</span>
+            <span class="px-4 py-2 bg-neutral-900 rounded-full">Computer Vision</span>
+        </div>
+    </section>
+
+    <section id="projects" class="my-10 text-center">
+        <h2 class="text-3xl font-semibold">Projects</h2>
+        <div class="grid md:grid-cols-2 gap-6 mt-6">
+            <div class="p-4 bg-neutral-900 shadow-lg rounded-lg">
+            <h3 class="text-xl font-semibold">Stock Price Prediction</h3>
+            <p class="mt-2">Developed an LSTM-based model to predict stock prices using sentiment analysis.</p>
             </div>
-        </section>
-        <h3 class="text-center mt-4 py-4">made with ❤️ by ade fiqri</h3>
+            <div class="p-4 bg-neutral-900 shadow-lg rounded-lg">
+            <h3 class="text-xl font-semibold">Medical AI</h3>
+            <p class="mt-2">Multiomics-based PRS prediction using transformers for disease risk assessment.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="text-center py-20">
+        <h2 class="text-3xl font-semibold">Contact Me</h2>
+        <p class="mt-4">Feel free to reach out</p>
+        <div class="mt-4">
+            <a href="mailto:your.email@example.com" class="px-4 py-2 bg-neutral-900 rounded-full">Email Me</a>
+            <a href="https://www.linkedin.com/in/yourprofile" class="ml-4 px-4 py-2 bg-neutral-900 rounded-full">LinkedIn</a>
+        </div>
+    </section>
+    <h3 class="text-center mt-4 py-4">made with ❤️ by ade fiqri</h3>
     </main>
+<script src="{% static 'js/button.js' %}" defer></script>
 </body>
 </html>
