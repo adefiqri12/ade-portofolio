@@ -13,7 +13,7 @@ body {
   z-index: 1;
 }
 
-/* .radial-gradient-bg {
+.radial-gradient-bg {
   position: fixed;
   top: 0;
   left: 0;
@@ -21,20 +21,30 @@ body {
   height: 100%;
   background-image: radial-gradient(
       circle 50px at var(--x) var(--y),
-      rgba(70, 70, 88, 0.2) 0%,
+      rgba(72, 72, 84, 0.15) 0%,
       transparent 100%
   );
   background-repeat: no-repeat;
   pointer-events: none;
   z-index: 0;
-} */
+}
 
-.typing {
-  border-right: 2px solid black;
+.typing-container {
+  display: inline-block;
+  position: relative;
+}
+
+.typing-bar {
+  position: absolute;
+  top: 0;
+  right: -4px;
+  width: 5px;
+  height: 100%;
+  background-color: black;
   animation: blink 0.75s step-end infinite;
 }
 
 @keyframes blink {
-  from, to { border-color: transparent }
-  50% { border-color: black; }
+  from, to { opacity: 0; }
+  50% { opacity: 1; }
 }

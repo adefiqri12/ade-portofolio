@@ -8,7 +8,7 @@ let lastY = window.innerHeight / 2;
 const TOTAL_DOTS = 120;
 
 // CUSTOMIZABLE: Cursor interaction radius (in pixels)
-const INTERACTION_RADIUS = 200; // How close cursor needs to be to affect dots
+const INTERACTION_RADIUS = 100; // How close cursor needs to be to affect dots
 
 // CUSTOMIZABLE: Cursor attraction force
 const ATTRACTION_STRENGTH = 0.3;

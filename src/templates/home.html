@@ -15,33 +15,37 @@
     <link rel="stylesheet" href="{% static 'css/output.css' %}" />
     <link rel="stylesheet" href="{% static 'css/custom.css' %}" />
     <script src="{% static 'js/bg_animation.js' %}" defer></script>
+    <script src="{% static 'js/type_animation.js' %}" defer></script>
     <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 
 <body class= "scrollbar">
-    <div class="radial-gradient-bg"></div>
     <canvas id="dotCanvas"></canvas>
     <header class="w-full left-0 transition-all md:py-8 bg-transparent" style="top: 0px;">
         <div class="container mx-auto flex justify-between items-center px-8">
             <h2 class="text-xl font-bold">Ade Fiqri</h2>
             <ul class="flex space-x-6 text-neutral-400">
-                <li><a href="#home" class="inline-block hover:text-white hover:scale-110 duration-300 ease-in-out">Home</a></li>
-                <li><a href="#about" class="inline-block hover:text-white hover:scale-110 duration-300 ease-in-out">About</a></li>
-                <li><a href="#skills" class="inline-block hover:text-white hover:scale-110 duration-300 ease-in-out">Skills</a></li>
-                <li><a href="#projects" class="inline-block hover:text-white hover:scale-110 duration-300 ease-in-out">Projects</a></li>
-                <li><a href="#contact" class="inline-block hover:text-white hover:scale-110 duration-300 ease-in-out">Contact</a></li>
+                <li><a href="#home" class="">Home</a></li>
+                <li><a href="#about" class="">About</a></li>
+                <li><a href="#skills" class="">Skills</a></li>
+                <li><a href="#projects" class="">Projects</a></li>
+                <li><a href="#contact" class="">Contact</a></li>
             </ul>
         </div>
     </header>
 
-    <main class="min-h-dvh mx-auto mt-12 px-8">
-        <section id="hero" class="text-center py-20">
-            <h1 class="text-5xl font-bold">Hello, I'm Ade Fiqri</h1>
-            <p class="text-xl mt-4">AI Researcher & Engineer</p>
+    <main class="min-h-dvh mx-auto px-8">
+        <section id="hero" class="text-center py-40">
+            <h1 id="typing-text" class="text-5xl font-bold">
+                <div class="typing-container">
+                    <span id="text-content"></span>
+                    <div class="typing-bar"></div>
+                </div>
+            </h1>
             <p class="mt-4 max-w-2xl mx-auto">I specialize in deep learning, NLP, and computer vision. My goal is to leverage AI to solve complex problems and create impactful solutions.</p>
             <div class="mt-6">
-                <a href="#projects" class="inline-block px-6 py-3 bg-neutral-900 font-semibold rounded-full hover:scale-110 duration-300 ease-in-out">View My Work</a>
-                <a href="#contact" class="inline-block ml-4 px-6 py-3 bg-neutral-950 border border-neutral-900 font-semibold rounded-full hover:scale-110 duration-300 ease-in-out"> Contact Me</a>
+                <a href="#projects" class="inline-block px-6 py-3 bg-neutral-900 font-semibold rounded-full">View My Work</a>
+                <a href="#contact" class="inline-block ml-4 px-6 py-3 bg-neutral-950 border border-neutral-900 font-semibold rounded-full"> Contact Me</a>
             </div>
         </section>
 
@@ -80,13 +84,13 @@
         <!-- Contact Section -->
         <section id="contact" class="text-center py-20">
             <h2 class="text-3xl font-semibold">Contact Me</h2>
-            <p class="mt-4">Feel free to reach out via email or LinkedIn.</p>
+            <p class="mt-4">Feel free to reach out</p>
             <div class="mt-4">
                 <a href="mailto:your.email@example.com" class="px-4 py-2 bg-neutral-900 rounded-full">Email Me</a>
                 <a href="https://www.linkedin.com/in/yourprofile" class="ml-4 px-4 py-2 bg-neutral-900 rounded-full">LinkedIn</a>
             </div>
         </section>
+        <h3 class="text-center mt-4 py-4">made with ❤️ by ade fiqri</h3>
     </main>
 </body>
 </html>
-
