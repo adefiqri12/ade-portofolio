@@ -1,8 +1,3 @@
-body {
-  background-color: rgb(10, 10, 10);  /* bg-gray-950 equivalent */
-  color: rgb(243, 244, 246);  /* text-gray-100 equivalent */
-}
-
 #dotCanvas {
   position: fixed;
   top: 0;
@@ -11,22 +6,6 @@ body {
   height: 100%;
   pointer-events: none;
   z-index: 1;
-}
-
-.radial-gradient-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient(
-      circle 50px at var(--x) var(--y),
-      rgba(72, 72, 84, 0.15) 0%,
-      transparent 100%
-  );
-  background-repeat: no-repeat;
-  pointer-events: none;
-  z-index: 0;
 }
 
 .typing-container {
@@ -45,6 +24,16 @@ body {
 }
 
 @keyframes blink {
-  from, to { opacity: 0; }
-  50% { opacity: 1; }
+  from,
+  to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.visible-section {
+  opacity: 1;
+  transform: translateY(0);
 }
