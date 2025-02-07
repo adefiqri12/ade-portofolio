@@ -1,19 +1,40 @@
-.radial-gradient-bg {
-    position: relative;
-    background: 
-      /* Layer 1: The dot pattern */
-      radial-gradient(
-        circle 1px at 50% 50%,
-        rgba(38, 100, 150, 1) 0%,
-        transparent 100%
-      ) 0 0/20px 20px,
-      /* Layer 2: The moving radial gradient */
-      radial-gradient(
-        circle 300px at var(--x) var(--y),
-        rgba(12, 40, 92, 0.4) 0%,
-        transparent 100%
-      ),
-      /* Layer 3: Base background color */
-      rgb(17, 24, 39); /* equivalent to bg-gray-900 */
-    background-repeat: repeat, no-repeat, no-repeat;
-  }
+body {
+  background-color: rgb(10, 10, 10);  /* bg-gray-950 equivalent */
+  color: rgb(243, 244, 246);  /* text-gray-100 equivalent */
+}
+
+#dotCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* .radial-gradient-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+      circle 50px at var(--x) var(--y),
+      rgba(70, 70, 88, 0.2) 0%,
+      transparent 100%
+  );
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 0;
+} */
+
+.typing {
+  border-right: 2px solid black;
+  animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: black; }
+}
