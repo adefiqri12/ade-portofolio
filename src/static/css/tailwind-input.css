@@ -12,7 +12,7 @@
   }
 
   .scrollbar::-webkit-scrollbar-track {
-    background: #1a1a1a;
+    background: #171717;
   }
 
   .scrollbar::-webkit-scrollbar-thumb {
@@ -27,10 +27,6 @@
 
 .btn-skill {
   @apply px-4 py-2 bg-neutral-900 rounded-full;
-}
-
-.btn-skill:hover {
-  @apply bg-neutral-800;
 }
 
 .nav-link {
