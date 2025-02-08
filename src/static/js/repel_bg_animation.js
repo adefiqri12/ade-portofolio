@@ -6,17 +6,17 @@ let screenHeight = window.innerHeight;
 function calculateResponsiveValues() {
     // Calculate screen area in pixels
     const screenArea = screenWidth * screenHeight;
-    
+
     // Base density (dots per million pixels)
     const DOT_DENSITY = 5; // Adjust this value to change overall dot density
-    
+
     // Calculate total dots based on screen area
     const calculatedDots = Math.floor((screenArea * DOT_DENSITY) / 1000000);
-    
+
     // Set minimum and maximum dots
     const MIN_DOTS = 100;
     const MAX_DOTS = 300;
-    
+
     // Clamp the number of dots between min and max
     return {
         totalDots: Math.min(Math.max(calculatedDots, MIN_DOTS), MAX_DOTS),
@@ -42,10 +42,10 @@ function resizeCanvas() {
     screenHeight = window.innerHeight;
     canvas.width = screenWidth;
     canvas.height = screenHeight;
-    
+
     // Recalculate responsive values
     responsiveValues = calculateResponsiveValues();
-    
+
     // Recreate dots with new values
     createDots();
 }
@@ -54,10 +54,10 @@ class Dot {
     constructor(x, y) {
         this.x = x;
         this.y = y;
-        
+
         // Size now uses responsive values
-        this.size = Math.random() * 
-            (responsiveValues.maxDotSize - responsiveValues.minDotSize) + 
+        this.size = Math.random() *
+            (responsiveValues.maxDotSize - responsiveValues.minDotSize) +
             responsiveValues.minDotSize;
 
         // Speed scales with screen size
@@ -74,7 +74,7 @@ class Dot {
         const dx = mouseX - this.x;
         const dy = mouseY - this.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
-        
+
         if (distance < INTERACTION_RADIUS) {
             const angle = Math.atan2(dy, dx);
             const force = (INTERACTION_RADIUS - distance) / INTERACTION_RADIUS;
