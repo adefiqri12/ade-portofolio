@@ -114,3 +114,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Chat panel
+const chatButton = document.getElementById('chatButton');
+const chatPanel = document.getElementById('chatPanel');
+const chatCloseButton = document.getElementById('chatCloseButton');
+const clearChatButton = document.getElementById('clearChatButton');
+const chatMessages = document.getElementById('chatMessages');
+
+// Toggle the chat panel when the "Chat Me" button is clicked.
+chatButton.addEventListener('click', () => {
+    chatPanel.classList.toggle('hidden');
+});
+
+// Hide the chat panel when the close button is clicked.
+chatCloseButton.addEventListener('click', () => {
+    chatPanel.classList.add('hidden');
+});
+
+// Clear all chat messages when the clear chat button is clicked.
+clearChatButton.addEventListener('click', () => {
+    chatMessages.innerHTML = '';
+});

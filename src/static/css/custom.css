@@ -19,7 +19,7 @@
   right: -4px;
   width: 5px;
   height: 100%;
-  background-color: black;
+  background-color: #444;
   animation: blink 0.75s step-end infinite;
 }
 

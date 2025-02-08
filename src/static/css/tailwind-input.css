@@ -34,5 +34,5 @@
 }
 
 .nav-link:hover {
-  @apply text-white scale-110;
+  @apply text-gray-100 scale-110;
 }
