@@ -31,7 +31,7 @@ class Dot {
         this.size = Math.random() * 2 + 1; // Random size between 1-3px
 
         // CUSTOMIZABLE: Base movement speed
-        const baseSpeed = 0.5; // Increase this value for faster movement
+        const baseSpeed = 0.4; // Increase this value for faster movement
         this.speedX = (Math.random() - 0.5) * baseSpeed;
         this.speedY = (Math.random() - 0.5) * baseSpeed;
 
