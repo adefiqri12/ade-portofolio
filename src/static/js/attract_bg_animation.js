@@ -11,7 +11,7 @@ const TOTAL_DOTS = 120;
 const INTERACTION_RADIUS = 100; // How close cursor needs to be to affect dots
 
 // CUSTOMIZABLE: Cursor attraction force
-const ATTRACTION_STRENGTH = 0.3;
+const ATTRACTION_STRENGTH = 0.35;
 
 let dots = [];
 
