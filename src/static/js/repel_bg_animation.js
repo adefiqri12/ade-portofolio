@@ -8,7 +8,7 @@ function calculateResponsiveValues() {
     const screenArea = screenWidth * screenHeight;
     
     // Base density (dots per million pixels)
-    const DOT_DENSITY = 10; // Adjust this value to change overall dot density
+    const DOT_DENSITY = 5; // Adjust this value to change overall dot density
     
     // Calculate total dots based on screen area
     const calculatedDots = Math.floor((screenArea * DOT_DENSITY) / 1000000);
