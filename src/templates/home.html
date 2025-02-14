@@ -14,7 +14,7 @@
     <link rel="icon" href="{% static 'image/logo.png' %}" />
     <link rel="stylesheet" href="{% static 'css/output.css' %}" />
     <link rel="stylesheet" href="{% static 'css/custom.css' %}" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <script src="{% static 'js/repel_bg_animation.js' %}" defer></script>
     <script src="{% static 'js/type_animation.js' %}" defer></script>
     <script src="//unpkg.com/alpinejs" defer></script>
@@ -51,7 +51,6 @@
             </ul>
         </div>
     </header>
-
     <!-- Main Content -->
     <!-- Note: We add some top padding (pt-20) to offset the fixed header -->
     <main class="max-w-3xl mx-auto px-4 lg:px-8 pt-20">
@@ -100,18 +99,57 @@
 
     <section id="skills" class="snap-start h-screen flex flex-col justify-center items-center text-center opacity-0 translate-y-5 transition-all duration-500 ease-out">
         <h2 class="text-3xl font-semibold">Skills</h2>
-            <div class="flex flex-wrap justify-center gap-4 mt-6">
-                <span class="btn-skill">Python</span>
-                <span class="btn-skill">TensorFlow</span>
-                <span class="btn-skill">PyTorch</span>
-                <span class="btn-skill">NLP</span>
-                <span class="btn-skill">Computer Vision</span>
+        
+        <!-- Programming & Web Development -->
+        <div class="mt-8">
+            <h3 class="text-xl font-medium mb-3">Programming & Web Development</h3>
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="btn-skill group">
+                    <i class="devicon-python-plain text-5xl"></i>
+                    <span class="opacity-0 group-hover:opacity-100 absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-sm transition-opacity duration-300">Python</span>
+                </span>
+                <span class="btn-skill group">
+                    <i class="devicon-flask-original text-5xl"></i>
+                    <span class="opacity-0 group-hover:opacity-100 absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-sm transition-opacity duration-300">Flask</span>
+                </span>
+                <span class="btn-skill group">
+                    <i class="devicon-django-plain text-5xl"></i>
+                    <span class="opacity-0 group-hover:opacity-100 absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-sm transition-opacity duration-300">Django</span>
+                </span>
+                <span class="btn-skill group">
+                    <i class="devicon-sqlite-plain text-5xl"></i>
+                    <span class="opacity-0 group-hover:opacity-100 absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-sm transition-opacity duration-300">SQLite</span>
+                </span>
             </div>
+        </div>
+    
+        <!-- Machine Learning -->
+        <div class="mt-8">
+            <h3 class="text-xl font-medium mb-3">Machine Learning</h3>
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="btn-skill group">
+                    <i class="devicon-tensorflow-original text-5xl"></i>
+                    <span class="opacity-0 group-hover:opacity-100 absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-sm transition-opacity duration-300">TensorFlow</span>
+                </span>
+                <span class="btn-skill group">
+                    <i class="devicon-pytorch-original text-5xl"></i>
+                    <span class="opacity-0 group-hover:opacity-100 absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-sm transition-opacity duration-300">PyTorch</span>
+                </span>
+                <span class="btn-skill group">
+                    <i class="devicon-scikitlearn-plain text-5xl"></i>
+                    <span class="opacity-0 group-hover:opacity-100 absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-sm transition-opacity duration-300">Scikit-learn</span>
+                </span>
+                <span class="btn-skill group">
+                    <i class="devicon-matplotlib-plain text-5xl"></i>
+                    <span class="opacity-0 group-hover:opacity-100 absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-sm transition-opacity duration-300">Matplotlib</span>
+                </span>
+            </div>
+        </div>
     </section>
+
 
     <section id="projects" class="snap-start h-screen flex flex-col justify-center items-center text-center opacity-0 translate-y-5 transition-all duration-500 ease-out">
         <h2 class="text-3xl font-semibold">Projects</h2>
-        
         <!-- Project Container -->
         <div class="relative w-full max-w-3xl mt-6 px-4">
             <!-- Navigation Buttons -->
@@ -181,7 +219,6 @@
             </button>
             </div>
         </div>
-        
         <!-- Chat Messages -->
         <div class="text-sm flex-1 overflow-y-auto space-y-4 px-2 md:pl-0 scrollbar">
             <!-- Bot message -->
