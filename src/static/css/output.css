@@ -752,7 +752,6 @@
   --tw-scale-y: 110%;
   --tw-scale-z: 110%;
   scale: var(--tw-scale-x) var(--tw-scale-y);
-  background-color: var(--color-neutral-700);
   color: var(--color-gray-100);
 }
 @property --tw-translate-x {
